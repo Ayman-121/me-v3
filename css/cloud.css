@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+.content{
+  min-width: 100vw;
+  min-height: 100vh;
+  max-height: 100vh;
+}
+
+.tagcloud {
+    font-family: 'Poppins', sans-serif;  
+    font-size: 20px;
+    margin: auto;
+    width: 50%;
+  }
+  .tagcloud--item:hover {
+    color: #36454F;
+  }
+@media (max-width:767px) {
+  .tagcloud{
+    margin: 50px 0;
+    width: 300px !important;
+    height: 300px !important;
+  }
+}
