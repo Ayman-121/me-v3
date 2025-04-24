@@ -1,7 +1,7 @@
 const projects = [
   {
       id: 1,
-      title: "My Info <sup>v1</sub>",
+      title: "My Info <sup>v1</sub> <sup>2021</sub>",
       description: "My previous personal website. Responsive, Clean, and Simple.",
       image: "imgs/My_Info.jpeg",
       url: "https://ayman-121.github.io/My_Info/",
@@ -10,7 +10,7 @@ const projects = [
   },
   {
       id: 2,
-      title: "QQQ Media <sub>Mock</sub>",
+      title: "QQQ Media <sub>Mock</sub> <sup>2021</sub>",
       description: "A media company website with modern design and interactive elements. This project demonstrates advanced CSS/JS animations, video integration, and a content management system.",
       image: "imgs/QQQ.jpeg",
       url: "https://ayman-121.github.io/QQQ/",
@@ -19,7 +19,7 @@ const projects = [
   },
   {
       id: 3,
-      title: "E-School Platform <sub>Mock</sub>",
+      title: "E-School Platform <sub>Mock</sub> <sup>2021</sub>",
       description: "Similar tp Eschool's Front-end student's page.",
       image: "imgs/Eschool.jpeg",
       url: "https://ayman-121.github.io/Eschool/",
@@ -28,7 +28,7 @@ const projects = [
   },
   {
       id: 4,
-      title: "Athlete Portfolio",
+      title: "Athlete Portfolio <sup>2021</sub>",
       description: "A professional portfolio website for an athlete showcasing career highlights, skills, and achievements. Features a timeline of events, media gallery, and contact information.",
       image: "imgs/Sharara.jpeg",
       url: "https://ayman-121.github.io/Sharara_Mohammad/",
@@ -37,7 +37,7 @@ const projects = [
   },
   {
       id: 5,
-      title: "Mexant Business Solutions <sub>A Test Website</sub>",
+      title: "Mexant Business Solutions <sub>A Test Website</sub> <sup>2020</sub>",
       description: "A business services website offering web development, design, and digital marketing solutions.",
       image: "imgs/Mexant.jpeg",
       url: "https://ayman-121.github.io/Mexant/",
@@ -46,7 +46,7 @@ const projects = [
   },
   {
       id: 6,
-      title: "Quran Website <sup>v1</sup>",
+      title: "Quran Website <sup>v1</sup> <sup>2021</sub>",
       description: "An interactive Quran Website with verses. Developed with a focus on performance.",
       image: "imgs/quran.jpeg",
       url: "https://ayman-121.github.io/Quran/",
@@ -55,7 +55,7 @@ const projects = [
   },
   {
       id: 7,
-      title: "Math Arithmetic Sequences Calculator",
+      title: "Math Arithmetic Sequences Calculator <sup>2024</sub>",
       description: "A specialized tool for mathematical calculations and sequence analysis.",
       image: "imgs/maths.jpeg",
       url: "https://ayman-121.github.io/math-project-ayman/",
@@ -64,10 +64,19 @@ const projects = [
   },
   {
       id: 8,
-      title: "Al Logarithms Explorer",
+      title: "Al Logarithms Explorer <sup>2025</sub>",
       description: "A specialized tool for Visualize, understand, and master logarithmic functions. Features include graphing capabilities and formula references for educational purposes.",
       image: "imgs/math-2.jpeg",
       url: "https://ayman-121.github.io/math-proj-2/",
+      category: "web",
+      tags: ["JavaScript", "HTML5", "CSS3"]
+  },
+    {
+      id: 9,
+      title: "KKIS MUN Website <sup>2025</sub>",
+      description: "The official website for the Knights of Knowledge International School (KKIS) Model United Nations 2025. This site provides all essential information about the KKIS MUN 2025 conference, including registration details, committee topics, schedules, and more. Built with a modern web stack to ensure accessibility and responsiveness.",
+      image: "imgs/math-2.jpeg",
+      url: "https://kkis-online.github.io/kkis-mun-25/",
       category: "web",
       tags: ["JavaScript", "HTML5", "CSS3"]
   }
