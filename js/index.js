@@ -30,7 +30,7 @@ const projects = [
         id: 4,
         title: "Athlete Portfolio <sup>2021</sub>",
         description: "A professional portfolio website for an athlete showcasing career highlights, skills, and achievements. Features a timeline of events, media gallery, and contact information.",
-        image: "imgs/Sharara.jpeg",
+        image: "imgs/sharara.jpeg",
         url: "https://ayman-121.github.io/Sharara_Mohammad/",
         category: "portfolio",
         tags: ["HTML5", "CSS3", "JavaScript"]
