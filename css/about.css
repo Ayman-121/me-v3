@@ -81,7 +81,14 @@
     .tab-content {
       padding: 2rem;
       display: none;
-
+      
+      &#profile{
+        padding: 0rem;
+        .profile-info{
+          padding: 1rem;
+          padding-left: 0.25rem;
+        }
+      }
       &.active {
         display: block;
         animation: fadeIn 0.5s ease-in-out;
@@ -97,10 +104,20 @@
   .profile-container {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
 
     @media (min-width: 768px) {
       flex-direction: row;
+    }
+    @media (max-width: 768px) {
+      background-image: url(../imgs/me\ 2.jpg);
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      .profile-info{
+        background-color: #ffffff73;
+        padding: 1rem !important;
+      }
     }
 
     .profile-image {
@@ -108,10 +125,16 @@
       width: 100%;
       max-width: 300px;
       margin: 0 auto;
-      /* background-image: url(../imgs/me.jpg); */
+      background-image: url(../imgs/me\ 2.jpg);
       background-size: cover;
       background-position: center;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
+    .profile-image:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     }
 
     .profile-info {
@@ -173,6 +196,26 @@
         }
       }
     }
+  }
+
+  .profile-image::before {
+    content: 'Click to visit my gallery!';
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    z-index: 100;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .profile-image:hover::before {
+    opacity: 1;
   }
 
   .skilling-category {

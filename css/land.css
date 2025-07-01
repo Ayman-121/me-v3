@@ -150,20 +150,18 @@ section {
   left: 0;
   width: 100vw;
   height: 100vh;
+  background-image: url('../imgs/bg.jpg');
   background-size: cover;
   pointer-events: none;
-  mix-blend-mode: difference;
-  -webkit-transform: scalex(-1);
-          transform: scalex(-1);
-  -webkit-filter: grayscale(1) contrast(1);
-          filter: grayscale(1) contrast(1);
+  mix-blend-mode: multiply;
+
+  @media (max-width: 480px) {
+    background-position: 20%;
+  }
 }
 
 section .section-content {
   display: block;
-  position: absolute;
-  top: 5rem;
-  bottom: 5rem;
   left: 2rem;
   right: 2rem;
   padding: 0.4rem;
@@ -437,8 +435,7 @@ a {
   color: transparent;
   letter-spacing: 2px;
   word-spacing: 3px;
-  color: #000;
-  -webkit-text-stroke: .4px var(--c5);
+  color: #fff;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 18px;
 }

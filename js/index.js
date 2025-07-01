@@ -1,15 +1,24 @@
 const projects = [
     {
         id: 1,
-        title: "My Info <sup>v1</sub> <sup>2021</sub>",
-        description: "My previous personal website. Responsive, Clean, and Simple.",
+        title: "My Gallery Website <sup>v1</sub> <sup>2025</sub>",
+        description: "Just a website to showcase ME.",
         image: "imgs/My_Info.jpeg",
-        url: "https://ayman-121.github.io/My_Info/",
+        url: "https://ayman-121.github.io/ayman-gallery/",
         category: "portfolio",
         tags: ["HTML5", "CSS3", "JavaScript"]
     },
     {
         id: 2,
+        title: "My Qr Code Website <sup>v1</sub> <sup>2025</sub>",
+        description: "A website that gets opened when you scan my qr code which is on my clothes or business cards.",
+        image: "imgs/ayman-qr.png",
+        url: "https://ayman-121.github.io/ayman-qr/",
+        category: "portfolio",
+        tags: ["HTML5", "CSS3", "JavaScript"]
+    },
+    {
+        id: 3,
         title: "QQQ Media <sub>Mock</sub> <sup>2021</sub>",
         description: "A media company website with modern design and interactive elements. This project demonstrates advanced CSS/JS animations, video integration, and a content management system.",
         image: "imgs/QQQ.jpeg",
@@ -18,7 +27,7 @@ const projects = [
         tags: ["HTML5", "CSS3", "JavaScript", "API"]
     },
     {
-        id: 3,
+        id: 4,
         title: "E-School Platform <sub>Mock</sub> <sup>2021</sub>",
         description: "Similar tp Eschool's Front-end student's page.",
         image: "imgs/Eschool.jpeg",
@@ -27,7 +36,7 @@ const projects = [
         tags: ["HTML5", "CSS3", "JavaScript"]
     },
     {
-        id: 4,
+        id: 5,
         title: "Athlete Portfolio <sup>2021</sub>",
         description: "A professional portfolio website for an athlete showcasing career highlights, skills, and achievements. Features a timeline of events, media gallery, and contact information.",
         image: "imgs/sharara.jpeg",
@@ -36,7 +45,7 @@ const projects = [
         tags: ["HTML5", "CSS3", "JavaScript"]
     },
     {
-        id: 5,
+        id: 6,
         title: "Mexant Business Solutions <sub>A Test Website</sub> <sup>2020</sub>",
         description: "A business services website offering web development, design, and digital marketing solutions.",
         image: "imgs/Mexant.jpeg",
@@ -45,7 +54,7 @@ const projects = [
         tags: ["HTML5", "SCSS", "JavaScript"]
     },
     {
-        id: 6,
+        id: 7,
         title: "Quran Website <sup>v1</sup> <sup>2021</sub>",
         description: "An interactive Quran Website with verses. Developed with a focus on performance.",
         image: "imgs/quran.jpeg",
@@ -54,7 +63,7 @@ const projects = [
         tags: ["JavaScript", "HTML5", "API"]
     },
     {
-        id: 7,
+        id: 8,
         title: "Math Arithmetic Sequences Calculator <sup>2024</sub>",
         description: "A specialized tool for mathematical calculations and sequence analysis.",
         image: "imgs/maths.jpeg",
@@ -63,7 +72,7 @@ const projects = [
         tags: ["JavaScript", "HTML5", "CSS3"]
     },
     {
-        id: 8,
+        id: 9,
         title: "Al Logarithms Explorer <sup>2025</sub>",
         description: "A specialized tool for Visualize, understand, and master logarithmic functions. Features include graphing capabilities and formula references for educational purposes.",
         image: "imgs/math-2.jpeg",
@@ -72,7 +81,7 @@ const projects = [
         tags: ["JavaScript", "HTML5", "CSS3"]
     },
       {
-        id: 9,
+        id: 10,
         title: "KKIS MUN Website <sup>2025</sub>",
         description: "The official website for the Knights of Knowledge International School (KKIS) Model United Nations 2025. This site provides all essential information about the KKIS MUN 2025 conference, including registration details, committee topics, schedules, and more. Built with a modern web stack to ensure accessibility and responsiveness.",
         image: "imgs/mun.png",
@@ -103,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function() {
       
       card.innerHTML = `
           <div class="project-img">
-              <img src="${project.image}" alt="${project.title}">
+              <img src="${project.image}" alt="${project.title}" loading="lazy">
               <div class="project-overlay">
                   <a href="#" class="project-link" data-id="${project.id}">View Details</a>
               </div>
@@ -399,3 +408,39 @@ a = document.querySelectorAll("#yearDate")
 a.forEach((ele) => {
     ele.innerHTML = date
 })
+
+const profileImage = document.querySelector('.profile-image');
+
+if (profileImage) {
+  const profileImageLabel = document.createElement('div');
+  profileImageLabel.textContent = 'Click to visit my gallery!';
+  profileImageLabel.style.position = 'absolute';
+  profileImageLabel.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+  profileImageLabel.style.color = 'white';
+  profileImageLabel.style.padding = '5px 10px';
+  profileImageLabel.style.borderRadius = '5px';
+  profileImageLabel.style.whiteSpace = 'nowrap';
+  profileImageLabel.style.zIndex = '10';
+  profileImageLabel.style.opacity = '0';
+  profileImageLabel.style.transition = 'opacity 0.3s ease';
+
+  profileImage.appendChild(profileImageLabel);
+
+  profileImage.addEventListener('mouseenter', function() {
+    console.log('Mouse entered profile image');
+    profileImageLabel.style.opacity = '1';
+  });
+
+  profileImage.addEventListener('mouseleave', function() {
+    console.log('Mouse left profile image');
+    profileImageLabel.style.opacity = '0';
+  });
+
+  profileImage.addEventListener('mousemove', function(e) {
+    profileImageLabel.style.left = (e.pageX + 10) + 'px';
+    profileImageLabel.style.top = (e.pageY - 30) + 'px';
+    console.log('Mouse moved over profile image');
+    console.log('Label opacity:', profileImageLabel.style.opacity);
+    console.log('Label position:', profileImageLabel.style.left, profileImageLabel.style.top);
+  });
+}
